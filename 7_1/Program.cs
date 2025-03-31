@@ -36,9 +36,9 @@ namespace _7_1
             Console.WriteLine($"Второй треугольник со сторонами {a2},{b2},{c2}, имеет площадь {s2}");
 
             string result = string.Empty;
-            if (s1 == s2) result = "Треугольники равны по площади";
-            if (s1 > s2) result = "Площадь Первого треугольника больше";
-            if (s1 < s2) result = "Площадь Второго треугольника больше";
+            if (s1 == s2) result = "Треугольники равны по площади!";
+            if (s1 > s2) result = "Площадь Первого треугольника больше!";
+            if (s1 < s2) result = "Площадь Второго треугольника больше!";
 
             Console.WriteLine(result);
             Console.WriteLine("Press any key to continue");
