@@ -16,23 +16,22 @@ namespace _7_3
 
             Console.WriteLine("\n\nPress any key to continue");
             Console.ReadKey();
-
-            static void PrintArray(int[] arr, bool rev = false)
+        }
+        static void PrintArray(int[] arr, bool rev = false)
+        {
+            if (!rev)
             {
-                if (!rev)
-                {
-                    Console.WriteLine("\n\nДополнительный агрумент = false (default), выводим неизменный массив:");
-                    foreach (int element in arr)
-                        Console.Write($"{element} ");
+                Console.WriteLine("\n\nДополнительный агрумент = false (default), выводим неизменный массив:");
+                foreach (int element in arr)
+                    Console.Write($"{element} ");
 
-                }
-                else
+            }
+            else
+            {
+                Console.WriteLine("\n\nДополнительный агрумент = true, выводим отзеркаленный массив:");
+                for (int i = arr.Length - 1; i >= 0; i--)
                 {
-                    Console.WriteLine("\n\nДополнительный агрумент = true, выводим отзеркаленный массив:");
-                    for (int i = arr.Length - 1; i >= 0; i--)
-                    {
-                        Console.Write($"{arr[i]} ");
-                    }
+                    Console.Write($"{arr[i]} ");
                 }
             }
         }

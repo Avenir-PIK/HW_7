@@ -16,12 +16,12 @@
 
             Console.WriteLine("\nPress any key to continue");
             Console.ReadKey();
-
-            static void CubeCalc(int a, out double vol, out double sqr)
-            {
-                vol = Math.Pow(Convert.ToDouble(a), 3);
-                sqr = Math.Pow(Convert.ToDouble(a), 2) * 6;
-            }
         }
+        static void CubeCalc(int a, out double vol, out double sqr)
+        {
+            vol = Math.Pow(Convert.ToDouble(a), 3);
+            sqr = Math.Pow(Convert.ToDouble(a), 2) * 6;
+        }
+
     }
 }

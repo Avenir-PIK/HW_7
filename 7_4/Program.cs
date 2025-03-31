@@ -1,6 +1,4 @@
-﻿using System.Xml.Linq;
-
-namespace _7_4
+﻿namespace _7_4
 {
     internal class Program
     {

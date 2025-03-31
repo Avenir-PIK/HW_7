@@ -8,7 +8,7 @@ namespace _7_1
         {
             int a1, b1, c1, a2, b2, c2;
             Random rnd = new Random();
-            
+
             // создаём первый треугольник
             do
             {
@@ -43,12 +43,12 @@ namespace _7_1
             Console.WriteLine(result);
             Console.WriteLine("Press any key to continue");
             Console.ReadKey();
-
+        }
             static double Striangle(int a, int b, int c)
             {
                 double p = (a + b + c) / 2.0;
                 return Math.Pow(p * (p - a) * (p - b) * (p - c), 0.5);
             }
-        }
+        
     }
 }
