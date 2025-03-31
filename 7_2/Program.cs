@@ -1,39 +1,26 @@
-﻿using System.Xml.Linq;
-
-namespace _7_2
+﻿namespace _7_2
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Random rnd = new Random();
-            const int n = 10;
-            int[] array = new int[n];
-            for (int i = 0; i < n; i++) array[i] = rnd.Next(1,10);
+            double vol, sqr;
+            int a;
+            Console.WriteLine("Введите длину стороны куба");
+            a = Convert.ToInt32(Console.ReadLine());
 
-            PrintArray(array);
-            PrintArray(array, true);
+            CubeCalc(a, out vol, out sqr);
 
-            Console.WriteLine("\n\nPress any key to continue");
+            Console.WriteLine($"Объём куба со стороной {a} = {vol}");
+            Console.WriteLine($"Площадь поверхности куба со стороной {a} = {sqr}");
+
+            Console.WriteLine("\nPress any key to continue");
             Console.ReadKey();
 
-            static void PrintArray(int[] arr, bool rev = false)
+            static void CubeCalc(int a, out double vol, out double sqr)
             {
-                if (!rev)
-                {
-                    Console.WriteLine("\n\nДополнительный агрумент = false (default), выводим неизменный массив:");
-                    foreach (int element in arr)
-                        Console.Write($"{element} ");
-
-                }
-                else
-                {
-                    Console.WriteLine("\n\nДополнительный агрумент = true, выводим отзеркаленный массив:");
-                    for (int i = arr.Length-1; i >= 0; i--)
-                    {
-                        Console.Write($"{arr[i]} ");
-                    }
-                }
+                vol = Math.Pow(Convert.ToDouble(a), 3);
+                sqr = Math.Pow(Convert.ToDouble(a), 2) * 6;
             }
         }
     }
